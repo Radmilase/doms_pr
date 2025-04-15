@@ -29,18 +29,18 @@
       <geom type="box" size="0.015 0.015 0.015" rgba="0.2 0.2 0.5 1" friction=".5" priority="1"/>
       <site size="0.002" pos="0.015 0.015 0.015" name="hook"/>
     </body> -->
-<!-- 
+
     <body name="ball" pos="0 0 0.15">
       <freejoint/>
       <geom type="sphere" size="0.02" rgba="0.2 0.2 0.5 1" friction=".5" priority="1"/>
       <site size="0.002" pos="0.015 0.015 0" name="hook"/>
-    </body> -->
+    </body>
 
-    <body name="ellipsoid" pos="0 0 0.15">
+    <!-- <body name="ellipsoid" pos="0 0 0.15">
       <freejoint/>
       <geom type="ellipsoid" size="0.01 0.08 0.01" rgba="0.2 0.2 0.5 1" friction=".5" priority="1"/>
       <site size="0.002" pos="0 0 0.011" name="hook"/>
-    </body>
+    </body> -->
 
   </worldbody>
 

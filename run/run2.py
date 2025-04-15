@@ -4,7 +4,7 @@ import numpy as np
 import time
 
 # Загрузка модели из XML-файла
-m = mujoco.MjModel.from_xml_path("D:/Itmo/DOMS/project/doms_project/model/2f85.xml")
+m = mujoco.MjModel.from_xml_path("D:/Itmo/DOMS/project/doms_project/model/scene.xml")
 d = mujoco.MjData(m)
 
 # Получаем ID сенсоров по именам (используем mj_name2id)

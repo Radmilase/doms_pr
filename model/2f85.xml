@@ -60,6 +60,8 @@
 
 
   <worldbody>
+    <light directional="false" diffuse=".8 .8 .8" specular=".3 .3 .3" pos="0 0 3" dir="0 0 -1"/>
+
     <body name="base" childclass="2f85">
       <inertial mass="0.777441" pos="0 -2.70394e-05 0.0354675" quat="1 -0.00152849 0 0"
         diaginertia="0.000260285 0.000225381 0.000152708"/>
@@ -96,6 +98,7 @@
           <geom class="collision" pos="0.0509079 -0.10392 -0.0091" quat="1 -1 0 0" type="mesh"  mesh="follower"/>
           <geom class="collision" pos="0.0509079 -0.10392 -0.0091" quat="1 -1 0 0" type="mesh"  mesh="tongue"/>
           <body name="left_pad" pos="-0.0377897 -0.103916 -0.0091" quat="1 -1 0 0" >
+          <site name="left_site" size="0.0001" pos="0.042 0 0.141"/>
             <geom class="pad_box1" name="left_pad1"/>
             <geom class="pad_box2" name="left_pad2"/>
           </body>
@@ -130,6 +133,8 @@
           <geom class="collision" pos="0.0509079 -0.10392 -0.0091" quat="1 -1 0 0"   mesh="tongue"/>
           <geom class="collision" pos="0.0509079 -0.10392 -0.0091" quat="1 -1 0 0"   mesh="follower"/>
           <body name="right_pad" pos="-0.0377897 -0.103916 -0.0091"   quat="1 -1 0 0" >
+            <site name="right_site" size="0.0001" pos="0.042 0 0.141"/>
+
             <geom class="pad_box1" name="right_pad1"/>
             <geom class="pad_box2" name="right_pad2"/>
           </body>
@@ -180,6 +185,14 @@
       gainprm="0.3137255 0 0" biasprm="0 -100 -10"/>
 
     <intvelocity name="force_control" joint="left_driver_joint" actrange="-1 1" kp="0.5"/>
+
+
+    
   </actuator>
+
+  <sensor>
+    <force name="left_contact" site="left_site"/>
+    <force name="right_contact" site="right_site"/>
+  </sensor>
 
 </mujoco>

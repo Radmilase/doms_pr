@@ -193,6 +193,19 @@
   <sensor>
     <force name="left_contact" site="left_site"/>
     <force name="right_contact" site="right_site"/>
+
+
+    <!-- Положение пальцев
+    Чтобы знать, насколько пальцы сжались и где они находятся. -->
+    <jointpos name="right_driver_pos" joint="right_driver_joint"/>
+    <jointpos name="left_driver_pos" joint="left_driver_joint"/>
+
+    <!-- Скорость движения пальцев
+    Для D-компоненты ПД-регулятора. -->
+    <jointvel name="right_driver_vel" joint="right_driver_joint"/>
+    <jointvel name="left_driver_vel" joint="left_driver_joint"/>  
+
+
   </sensor>
 
 </mujoco>

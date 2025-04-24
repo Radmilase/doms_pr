@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from matplotlib.gridspec import GridSpec
 
 # Загрузка модели
-m = mujoco.MjModel.from_xml_path("scene.xml")
+m = mujoco.MjModel.from_xml_path("doms_pr\model\scene.xml")
 d = mujoco.MjData(m)
 
 # Получение ID сенсоров
@@ -33,9 +33,9 @@ for sensor_type in sensor_ids:
             raise ValueError(f"Сенсор {sensor_type}/{side} не найден!")
 
 # Параметры PD-регулятора
-Kp = 0.1  
-Kd = 0.01  
-target_force = 1.0  
+Kp = 0.4230
+Kd = 0.0011
+target_force = 0.7120
 max_force = 5.0
 previous_error = 0.0
 

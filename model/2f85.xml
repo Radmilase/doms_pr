@@ -191,7 +191,7 @@
 
 
     <!-- <motor class="2f85" name="finger_r"  ="split" forcerange="-5 5" ctrlrange="0 255"/> -->
-    <motor name="right_finger_motor" joint="right_follower_joint" gear="10"/>
+    <!-- <motor name="right_finger_motor" joint="right_follower_joint" gear="10"/> -->
 
 
     

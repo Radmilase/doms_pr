@@ -1,4 +1,4 @@
-<mujoco model="2f85 scene">
+<mujoco model="ball">
   <include file="2f85.xml"/>
 
   <!-- Add some fluid viscosity to prevent the hanging box from jiggling forever -->
@@ -30,7 +30,7 @@
       <site size="0.002" pos="0.015 0.015 0.015" name="hook"/>
     </body> -->
 
-    <body name="ball" pos="0 0.1 0.2">
+    <body name="ball" pos="0 0.01 0.2">
       <freejoint/>
       <geom type="sphere" size="0.02" rgba="0.2 0.2 0.5 1" friction="0" priority="1"/>
       <site size="0.002" pos="0.015 0.015 0" name="hook"/>

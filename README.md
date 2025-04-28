@@ -11,8 +11,9 @@
 5. Провести тестирование и анализ результатов.
 
 
+![IMG_5251](https://github.com/user-attachments/assets/902abb16-c286-4639-9ad4-5cfa22941add)
 
-https://github.com/user-attachments/assets/cef0a59a-b48b-4e24-9af2-c8181b393e74
+
 
 
 

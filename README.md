@@ -62,11 +62,11 @@ rl_agent.py
 
 ### Авторы: 
 
-| Имя                  | Github                               |
-|----------------------|--------------------------------------|
-| Шарова Ангелина      | https://github.com/aasharova         |
-| Дерина Вероника      | https://github.com/VerDddD           |
-| Сегень Радмила       | https://github.com/radmilase         |
+| Имя                  | Github                               | ИСУ          |  
+|----------------------|--------------------------------------|--------------|
+| Шарова Ангелина      | https://github.com/aasharova         | 465747       | 
+| Дерина Вероника      | https://github.com/VerDddD           | 465747       |
+| Сегень Радмила       | https://github.com/radmilase         | 472460       |
 
 
 

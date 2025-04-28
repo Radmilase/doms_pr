@@ -13,8 +13,8 @@
 
 ![IMG_5251](https://github.com/user-attachments/assets/902abb16-c286-4639-9ad4-5cfa22941add)
 
-# Структура
-### Folder
+### Структура
+
 ```
 Radmilase/doms_pr/
 ├── model

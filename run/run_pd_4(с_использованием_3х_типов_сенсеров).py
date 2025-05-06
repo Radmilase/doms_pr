@@ -136,46 +136,38 @@ finally:
     viewer.close()
     print("Данные сохранены в sensor_data.csv")
 
-    # Создание комплексного отчета
     fig = plt.figure(figsize=(15, 25))
     gs = GridSpec(7, 2, figure=fig)
-
-    # 1. Силы и управление
     ax1 = fig.add_subplot(gs[0, :])
     ax1.plot(data['time'], data['force']['total'], 'b-', label='Суммарная сила')
     ax1.plot(data['time'], data['control'], 'r--', label='Управление')
     ax1.set_title('Динамика системы')
     ax1.legend()
     ax1.grid(True)
-
-    # 2. Компоненты сил (исправленный блок)
     components = ['X', 'Y', 'Z']
     for i, comp in enumerate(components):
-        # Используем разные строки для каждого компонента
-        ax = fig.add_subplot(gs[i+1, :])  # Занимаем всю ширину строки
+        
+        ax = fig.add_subplot(gs[i+1, :])  
         ax.plot(data['time'], data['force']['left'][i], 'b-', label='Left')
         ax.plot(data['time'], data['force']['right'][i], 'r--', label='Right')
         ax.set_title(f'Компонента {comp} силы')
         ax.legend()
         ax.grid(True)
 
-    # 3. Позиции (смещаем индексы на +3 после компонентов силы)
-    ax3 = fig.add_subplot(gs[4, :])  # Было 2, стало 4 (0-3 заняты)
+    ax3 = fig.add_subplot(gs[4, :])  
     ax3.plot(data['time'], data['position']['left'], 'b-', label='Left')
     ax3.plot(data['time'], data['position']['right'], 'r--', label='Right')
     ax3.set_title('Позиции драйверов')
     ax3.legend()
     ax3.grid(True)
 
-    # 4. Скорости
-    ax4 = fig.add_subplot(gs[5, :])  # Смещаем на +1
+    ax4 = fig.add_subplot(gs[5, :])  
     ax4.plot(data['time'], data['velocity']['left'], 'b-', label='Left')
     ax4.plot(data['time'], data['velocity']['right'], 'r--', label='Right')
     ax4.set_title('Скорости драйверов')
     ax4.legend()
     ax4.grid(True)
 
-    # 5. Сравнение позиций и скоростей
     ax5 = fig.add_subplot(gs[6, 0])
     ax5.plot(data['position']['left'], data['velocity']['left'], 'b-')
     ax5.set_title('Фазовый портрет (левый)')
@@ -188,7 +180,7 @@ finally:
 
     plt.tight_layout()
     plt.show()
-    # 6. Гистограммы
+    
     ax7 = fig.add_subplot(gs[5, 0])
     ax7.hist(data['position']['left'], bins=50, alpha=0.7, label='Left')
     ax7.hist(data['position']['right'], bins=50, alpha=0.7, label='Right')
@@ -202,8 +194,6 @@ finally:
     ax8.set_title('Распределение скоростей')
     ax8.legend()
     ax8.grid(True)
-
-    # 7. Корреляции
     ax9 = fig.add_subplot(gs[6, 0])
     ax9.scatter(data['position']['left'], data['velocity']['left'], s=1)
     ax9.set_title('Корреляция позиция-скорость (левый)')
@@ -217,7 +207,6 @@ finally:
     plt.tight_layout()
     plt.show()
 
-    # Дополнительные графики
     plt.figure(figsize=(12, 8))
     plt.suptitle('Сравнение всех параметров')
 
